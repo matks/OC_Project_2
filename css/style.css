@@ -9,19 +9,20 @@ body {
     -moz-box-sizing: border-box; /* Firefox, autres Gecko */
     -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
     margin: 0;
-    padding:0;
+    padding: 0;
   }
 
-/* VERSION DESKTOP */
 
-#container {
-    width: 100%;
-    margin: auto;
-}
+
+/* VERSION DESKTOP */
 
 a {
     text-decoration: none; 
     color:#000000; 
+}
+
+img {
+    object-fit: cover;
 }
 
 /* HEADER */
@@ -31,7 +32,7 @@ header {
     justify-content: space-between;
     align-items: center; 
     height: 118px;
-    margin:0 50px;
+    margin: 0 50px;
 }
 
 #logo {
@@ -39,23 +40,26 @@ header {
     margin-left:16px;
 }
 
-    /* MAIN */
+/* MAIN */
 main {
     margin: 0 50px;
 }
-    /* nav */
 
-.menu_item {
+/* nav */
+
+
+.menu-item {
     padding: 0 45px;
 }
 
-.menu_item:hover {
-    border-top: 3px solid #0065fc;
+.menu-item:hover {
+    border-top: 4px solid #0065fc;
     padding: 45px;
     color:#0065fc;
 
 }
-    /* section search */
+
+/* section search */
 
 .search h1 {
     font-size: 22px;    
@@ -83,9 +87,15 @@ main {
     font-size: 18px;
     font-weight:bold;
     width: 240px;
+    text-indent: 10px;
 }
 
-.search_FR {
+::-webkit-input-placeholder {  color:#000000; opacity: 1; }
+::-moz-placeholder {  color:#000000; opacity: 1;}
+input:-moz-placeholder {  color:#000000; opacity: 1;} 
+/*pour que la couleur noire s'affiche dans Chrome et Firefox*/
+
+.search-French {
     border-radius: 0 13px 13px 0;
     background:#0065fc;
     color: #ffff;
@@ -95,18 +105,18 @@ main {
     font-size: 18px;
 }
 
-.search_button {
+.search-button {
     display:none;
 }
 
-    /* section filter */
+/* section filter */
 
 .filter {
     display: flex;
     flex-wrap:wrap;
     align-items: center;
     margin: 30px 0px; 
-    gap: 15px;
+    gap: 25px;
 }
 
 .filter h2 {
@@ -117,7 +127,7 @@ main {
 .filter ul {
     display: flex;
     flex-wrap: wrap; 
-    gap: 10px;
+    gap: 17px;
 }
 
 .filter li {
@@ -132,7 +142,7 @@ main {
     font-size: 18px;
     font-weight: bold;
     color:#000000; 
-    padding: 0px 5px; 
+    padding: 0px 12px; 
 }
 
 .filter li:hover {
@@ -143,14 +153,13 @@ main {
     color: #0065fc;
     background-color: #DEEBFF;
     border-radius: 100%;
-    margin-right:6px;
     width: 45px;
     height: 45px;
     text-align: center;
     line-height: 3 !important;
 }
 
-    /* Info */
+/* Info */
 .info {
     display: flex;
     align-items:center;   
@@ -172,55 +181,57 @@ main {
 
 /* section accommodation */
 
-#page_accommodation {
+#page-accommodation {
     margin-top:30px;
     display: flex;
-    gap:50px;
+    gap: 45px;
 }
 
 .accommodation_Marseille {
     background-color: #F2F2F2;
     display:flex;
+    flex-direction: column;
     flex-wrap:wrap;
     border-radius: 20px;
     width: 67%;
+    padding: 40px;
 }
 
 .accommodation_Marseille h2 {
     font-size: 22px;
-    margin:5% 0% 0% 5%;
 }
 
 .card_accommodation_Marseille {
     display:flex;
     flex-wrap: wrap;
-    gap: 6%;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 38px;
+    padding: 30px 0px 50px 0px;
 }
 
 .card_hotel {
     min-width: 200px;
-    width: 26%;
-    height: 200px;
+    width: 30%;
+    height: 190px;
     background-color:  #ffff;
     border: 4px solid #ffff;
     border-radius: 20px;
     box-shadow: 1px 1px 10px #dfdfdf;
-    object-fit: cover;
     line-height: 1.5;
-    margin-top:25px;
 }
 
 
 .card_hotel img {
     width: 100%;
     height: 110px;
-    object-fit: cover;
     border-radius: 15px 15px 0 0;
 }
 
 .card_body_hotel {
-    padding-left: 5%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
 }
 
 h3 {
@@ -241,7 +252,6 @@ h3 {
     color:#000000;
     font-size: 18px;
     font-weight: bold;
-    margin: 7% 0% 5% 5%;
 }
 
 .full {
@@ -256,19 +266,10 @@ h3 {
 
 .star_rating_M {
     display: flex;
-    padding-top: 3%;
+    padding-top: 5px;
  }
 
 /*the most populars*/
-
-
-.page_populars h2 {
-    display: flex;
-    justify-content: space-between;
-    font-size: 22px;
-    margin:50px 50px 30px 60px;
-    align-items: center;
-}
 
 .page_populars {
     background-color: #F2F2F2;
@@ -277,22 +278,32 @@ h3 {
     border-radius: 20px;
     width: 33%;
     min-width: 350px;
+    padding: 40px 40px 0px 40px;
+}
+
+.page_populars h2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    align-items: center;
 }
 
 .card_populars {
     display:flex;
     flex-direction:column;
-    padding: 0 60px;
+    padding-top: 30px;
+    row-gap:12px;
 }
 
 .card_populars_hotels {
-    min-width: 260px;
+    min-width: 280px;
     height: 140px;
     background-color:  #ffff;
     border: 5px solid #ffff;
     border-radius: 20px;
     margin-bottom:25px; 
     box-shadow: 1px 1px 10px #dfdfdf;
+    
 }
 
 .card_populars_hotels a {
@@ -302,34 +313,34 @@ h3 {
 
 .card_populars_hotels img {
     width: 40%;
-    object-fit: cover;
     border-radius: 15px 0 0 15px;
+    flex-shrink:0;
 }
 
 .card_body_populars_hotels {
     display:flex;
     flex-direction: column;
-    padding-top: 10px;
-    padding-left: 10px;
+    justify-content: space-between;
+    padding: 10px;
     gap: 5px;
 }
 
 .star_rating_P {
     display: flex;
-    padding-top: 38px;
+    padding-top: 35px;
  }
 
  /* Activité à Marseille */
 
- #activities_Marseille {
+ #page-activities {
      padding-top: 50px;
  }
 
 .card_activities {
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2%;  
+    justify-content: space-between;  
+    margin-top:30px;
 }
 
 .card_activities h3 {
@@ -340,7 +351,6 @@ h3 {
     width: 100%;
     border-radius: 25px 25px 0px 0px;
     box-shadow: 1px 1px 10px #dfdfdf;
-    object-fit: cover;
 }
 
 .card_one { 
@@ -389,8 +399,7 @@ footer {
     display: flex;
     background: #F2F2F2;
     padding:45px; 
-    gap: 220px;
-   
+    gap: 220px;  
 }
 
 footer h2 {
@@ -399,7 +408,7 @@ footer h2 {
 }
 
 footer li {
-    font-size: 14px; 
+    font-size: 15.5px; 
     list-style: none;
     padding-top: 8px;
 }
@@ -425,22 +434,21 @@ footer li {
         margin: 25px 0px 15px 0px;
     }
     
-    .menu_item {
-        border-bottom: 3px solid #F2F2F2;
+    .menu-item {
         padding: 10px 51px;
     }
     
-    .menu_item:hover {
+    .menu-item:hover {
         border-top: none;
-        border-bottom: 3px solid #0065fc;
+        border-bottom: 4px solid #0065fc;
         padding: 10px 53px;
     }
 
-    .search_FR {
+    .search-French {
         display:none;
     }
 
-    .search_button {
+    .search-button {
         display:block;
         border-radius: 13px 13px 13px 13px;
         background:#0065fc;
@@ -452,7 +460,7 @@ footer li {
         margin-left: -20px;
     }
 
-    #page_accommodation {
+    #page-accommodation {
         flex-direction: column-reverse;
         gap: 25px;  
     }
@@ -465,42 +473,31 @@ footer li {
         margin: 20px;
     }
 
-    #activities_Marseille{
-        margin: 0 20px;
+    #page-activities{
+        margin: 0 12px;
     }
 
     .page_populars {
         background-color: #F2F2F2;
         border-radius: 0px;
         width: 100%;
+        padding: 40px 12px 0px 12px;
     }
 
     .accommodation_Marseille {
         background-color: #ffff;
         border-radius: 0px;
         width: 100%;
+        padding:12px;
     }
 
-    .card_populars {
-        padding: 0 25px;
-    }
-
-    .page_populars h2 {
-        margin: 40px 30px 30px 30px;
-    }
-    
     .card_hotel {
         width: 100%;
-    }
-
-    .card_accommodation_Marseille {
-        padding: 0px 16px;
     }
 
     .card_activities {
         display:flex;
         flex-direction: column; 
-        margin-top:10%;
         gap:30px;
     }
 
@@ -516,13 +513,19 @@ footer li {
         height: 150px;
     }
 
+    .card_populars {
+        row-gap:0;
+    }
+
+    .card_accommodation_Marseille {
+        gap:25px;
+    }
+
     footer {
         display: flex;
         flex-direction: column;
         gap: 30px;
         padding: 40px 20px;     
-        margin-bottom:20px;
-        
       }
   
     footer h2 {
@@ -531,6 +534,7 @@ footer li {
 }
 
 @media screen and (max-width: 992px) and (min-width: 769px){
+   
     footer {
         gap: 100px;
     }
